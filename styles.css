@@ -1,27 +1,119 @@
 body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(226, 255, 221, 0.4);
+}
+header {
+    margin-top: 80px;
 }
 h1, h2 {
     text-align: center;
     padding: 20px;
 }
 h1 {
-    font-size: 80px;
+    font-size: 55px;
 }
 h2 {
-    font-size: 40px;
+    font-size: 35px;
+    margin: 0 auto;
 }
 main {
-    max-width: 90%;
-    background-color: blanchedalmond;
+    width: 50%;
+    background-color: white;
     border-radius: 20px;
     margin: 20px auto;
+    box-shadow: 5px 5px 5px rgba(173, 173, 173, 0.5);
 }
+.input-form {
+    text-align: center;
+    margin: 10px auto;
+}
+.word-input {
+    padding: 15px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(173, 173, 173, 0.5);
+    box-shadow: 5px 5px 5px rgba(173, 173, 173, 0.5);
+    margin: 10px auto;
+    width: 60%;
+}
+.word-input::placeholder {
+    color: black;
+}
+.word-input-button {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    padding: 15px 10px;
+    border-radius: 20px;
+    border: 1px solid rgba(173, 173, 173, 0.5);
+    box-shadow: 5px 5px 5px rgba(173, 173, 173, 0.5);
+    margin: 10px;
+    cursor: pointer;
+}
+.word-input-button:hover {
+    background-color: rgba(226, 255, 221, 0.2);
+    
+}
+.poem-output {
+    margin: 10px auto;
+    text-align: center;
+    padding: 20px;
+    width: 30%;
+}
+.poem-text {
+    padding: 10px;
+}
+
 footer {
     text-align: center;
     margin: 20px auto;
+    width: 50%;
+    padding: 20px;
+    margin-top: 50px;
+    
+}
+footer .grid {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(173, 173, 173, 0.5);
 }
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    padding: 10px;
+}
+.footer-links {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+.footer-links:hover {
+    color: rgb(3, 80, 147);
+}
+footer h2 {
+    font-size: 24px;
+}
+
+@media(max-width: 1200px) {
+    h1 {
+        font-size: 40px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .poem-output {
+        width: 60%;
+    }
+    main, footer {
+        width: 80%;
+    }
+}
+@media(max-width: 800px) {
+    .word-input::placeholder {
+    font-size: 10px;
+    }
+    .word-input-button {
+        font-size: 10px;
+    }
 }

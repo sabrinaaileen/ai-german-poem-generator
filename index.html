@@ -11,21 +11,27 @@
         <h1>German AI Poem Generator</h1>
     </header>
     <main>
-        <h2>Enter a word</h2>
-        <form>
-            <label>Think of a word, it doesn't have to be german</label>
-            <input type="text" placeholder="Enter a word..." required autofocus autocomplete="off"/>
-            <input type="submit"/>
+        <h2>Start the magic🪄</h2>
+        <form class="input-form">
+            <input type="text" placeholder="Enter any word to see a german poem..." class="word-input" required autofocus autocomplete="off"/>
+            <input type="submit" class="word-input-button" value="Create"/>
         </form>
-        <div class="poem-text">Die Nacht ist kalt <br /> doch kälter noch im Wald</div>
+        <div class="poem-output">
+            <h3>Your poem:</h3>
+            <div class="poem-text">"Die Nacht ist kalt <br /> doch kälter noch im Wald"</div>
+            <p class="poem-author">- Aileen</p>
+        </div>
     </main>
     <footer>
+        <h2>Thanks for the visit!</h2>
         <div class="grid">
             <div class="grid-item">
-                <p>This project is open-sourced on <a href="https://github.com/sabrinaaileen/ai-german-poem-generator">GitHub</a> and hosted on Netlify</p>
+                <h3>About the project:</h3>
+                <p>This project is open-sourced on <a href="https://github.com/sabrinaaileen/ai-german-poem-generator" target="_blank" class="footer-links">GitHub</a> and hosted on Netlify</p>
             </div>
             <div class="grid-item">
                 <h3>About me:</h3>
+                <p>I am Sabrina, a passionate wannabe developer. Check out my <a href="https://www.sabrina-aileen-hodapp.de" target="_blank" class="footer-links">website</a> and <a href="https://github.com/sabrinaaileen" target="_blank" class="footer-links">GitHub-Account</a>. I am always looking for new projects 😇!</p>
             </div>
         </div>
     </footer>
