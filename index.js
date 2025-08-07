@@ -1,5 +1,6 @@
+const poemHeading = document.querySelector("#poem-heading");
+
 const displayPoem = (response) => {
-    const poemHeading = document.querySelector("#poem-heading");
     poemHeading.classList.remove("hidden");
     // display the poem
     new Typewriter('#poem-text', {
@@ -26,6 +27,7 @@ const generatePoem = (event) => {
     const poemSection = document.querySelector("#poem-section");
     poemText.innerHTML = "<p class='blink'>Generating your poem</p>";
     poemSection.classList.remove("hidden");
+    poemHeading.classList.add("hidden");
 }
 
 const inputForm = document.querySelector("#input-form");
