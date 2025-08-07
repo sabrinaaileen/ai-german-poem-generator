@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel="stylesheet" href="styles.css"/>
     <title>German AI Poem Generator</title>
 </head>
@@ -12,14 +13,14 @@
     </header>
     <main>
         <h2>Start the magic🪄</h2>
-        <form class="input-form">
+        <form class="input-form" id="input-form">
             <input type="text" placeholder="Enter any word to see a german poem..." class="word-input" required autofocus autocomplete="off"/>
             <input type="submit" class="word-input-button" value="Create"/>
         </form>
         <div class="poem-output">
             <h3>Your poem:</h3>
-            <div class="poem-text">"Die Nacht ist kalt <br /> doch kälter noch im Wald"</div>
-            <p class="poem-author">- Aileen</p>
+            <div class="poem-text" id="poem-text"></div>
+            <p class="poem-author" id="poem-author">- Aileen</p>
         </div>
     </main>
     <footer>
