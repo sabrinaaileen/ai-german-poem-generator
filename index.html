@@ -13,15 +13,29 @@
         <h1>German AI Poem Generator</h1>
     </header>
     <main>
-        <h2>Start the magic🪄</h2>
-        <form class="input-form" id="input-form">
-            <input type="text" placeholder="Enter any word to see a german poem..." class="word-input" id="user-instructions" required autofocus autocomplete="off"/>
-            <input type="submit" class="word-input-button" value="Create"/>
-        </form>
-        <div class="poem-output">
-            <h3>Your poem:</h3>
+        <section>
+            <h2>Start the magic🪄</h2>
+        <div class="form-container">
+            <form class="input-form" id="input-form">
+                <div class="form-grid">
+                    <div class="grid-item">
+                        <input type="text" placeholder="Start with entering a word..." class="word-input" id="user-instructions" required autofocus autocomplete="off"/>
+                        <div id="example">i.e. Flower, Bird and Home</div>
+                    </div>
+                    <div class="grid-item">
+                        <input type="submit" class="word-input-button" value="Create"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </section>
+       <section class="hidden" id="poem-section">
+         <div class="poem-output">
+            <h3 id="poem-heading" class="hidden">Your poem:</h3>
             <div class="poem-text" id="poem-text"></div>
         </div>
+       </section>
+        
     </main>
     <footer>
         <h2>Thanks for the visit!</h2>

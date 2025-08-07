@@ -1,4 +1,6 @@
 const displayPoem = (response) => {
+    const poemHeading = document.querySelector("#poem-heading");
+    poemHeading.classList.remove("hidden");
     // display the poem
     new Typewriter('#poem-text', {
         strings: response.data.answer,
@@ -19,13 +21,12 @@ const generatePoem = (event) => {
     // make the api call
     axios.get(apiUrl).then(displayPoem);
 
-    console.log("Generating poem");
-
-    
+    // optimizing the display
+    const poemText = document.querySelector("#poem-text");
+    const poemSection = document.querySelector("#poem-section");
+    poemText.innerHTML = "<p class='blink'>Generating your poem</p>";
+    poemSection.classList.remove("hidden");
 }
-
 
 const inputForm = document.querySelector("#input-form");
 inputForm.addEventListener("submit", generatePoem);
-
-//Die Nacht ist kalt <br /> doch kälter noch im Wald

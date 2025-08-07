@@ -18,10 +18,27 @@ h2 {
 }
 main {
     width: 50%;
+    margin: 0 auto;
+}
+section {
+    
     background-color: white;
     border-radius: 20px;
     margin: 20px auto;
     box-shadow: 5px 5px 5px rgba(173, 173, 173, 0.5);
+    padding-bottom: 15px;
+}
+.hidden {
+    display: none;
+}
+.form-container {
+    width: 80%;
+    margin: 0 auto;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
 }
 .input-form {
     text-align: center;
@@ -33,12 +50,14 @@ main {
     border: 1px solid rgba(173, 173, 173, 0.5);
     box-shadow: 5px 5px 5px rgba(173, 173, 173, 0.5);
     margin: 10px auto;
-    width: 60%;
+    width: 100%;
 }
 .word-input::placeholder {
     color: black;
+    opacity: 0.5;
 }
 .word-input-button {
+    width: 100%;
     background-color: white;
     color: black;
     font-weight: bold;
@@ -52,6 +71,12 @@ main {
 .word-input-button:hover {
     background-color: rgba(226, 255, 221, 0.2);
     
+}
+#example {
+    font-size: 10px;
+    opacity: 0.5;
+    text-align: left;
+    padding: 5px 15px;
 }
 .poem-output {
     margin: 10px auto;
@@ -95,6 +120,16 @@ footer h2 {
     font-size: 24px;
 }
 
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
 @media(max-width: 1200px) {
     h1 {
         font-size: 40px;
@@ -115,5 +150,23 @@ footer h2 {
     }
     .word-input-button {
         font-size: 10px;
+    }
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 0px;
+    }
+    .word-input-button {
+        width: 25%;
+    }
+    .word-input {
+        width: 90%;
+    }
+    footer h3 {
+        font-size: 18px;
+        margin: 5px auto;
+    }
+    footer p {
+        font-size: 12px;
+        margin: 5px;
     }
 }
